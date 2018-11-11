@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\User\\Desktop\\Cursos\\c sharp\\sharp_chess\\Projeto.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
