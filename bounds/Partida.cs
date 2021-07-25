@@ -31,7 +31,7 @@ class Partida {
     private void setup(Tabuleiro t) {
         for (int i = 1; i < 9; i+=7) {
             Peca[] ranks = {
-                new Torre(t, (i == 1)), new Cavalo(t, (i == 1)), new Bispo(t, (i == 1)), new Rainha(t, (i == 1)),
+                new Torre(t, (i == 1)), new Cavalo(t, (i == 1)), new Bispo(t, (i == 1)), new Dama(t, (i == 1)),
                 new Rei(t, (i == 1), this), new Bispo(t, (i == 1)), new Cavalo(t, (i == 1)), new Torre(t, (i == 1))
             };
             for (char c = 'a'; c <= 'h'; c++) { // 'a' == 97, 'h' == 104
@@ -240,12 +240,12 @@ class Partida {
         bool[] temPeca = { false, false, false, false };
         List<Peca> conj = new List<Peca>();
         foreach (Peca pc in pecasCapturadas(cor)) {
-            if (pc is Rainha) temPeca[0] = true;
+            if (pc is Dama) temPeca[0] = true;
             if (pc is Torre) temPeca[1] = true;
             if (pc is Bispo) temPeca[2] = true;
             if (pc is Cavalo) temPeca[3] = true;
         }
-        if (temPeca[0]) conj.Add(new Rainha(board, cor));
+        if (temPeca[0]) conj.Add(new Dama(board, cor));
         if (temPeca[1]) conj.Add(new Torre(board, cor));
         if (temPeca[2]) conj.Add(new Bispo(board, cor));
         if (temPeca[3]) conj.Add(new Cavalo(board, cor));
